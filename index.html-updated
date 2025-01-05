@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Specifications</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9fafb;
+        }
+
+        .specs-wrapper {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .specs-card {
+            background: white;
+            border-radius: 12px;
+            border: 4px solid transparent;
+            width: 100%;
+            overflow: hidden;
+            animation: tableBorderAnimation 4s infinite linear;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .specs-header {
+            text-align: center;
+            padding: 16px;
+            background: white;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .specs-title {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .specs-image {
+            text-align: center;
+            background-color: #f1f5f9;
+        }
+
+        .specs-image img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .specs-content {
+            padding: 16px;
+        }
+
+        .spec-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 12px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            animation: specRowBorderAnimation 4s infinite linear;
+            transition: transform 0.3s ease;
+        }
+
+        .spec-row:hover {
+            transform: translateX(10px);
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .spec-category {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .spec-details {
+            color: #6b7280;
+        }
+
+        /* Table Border Animation */
+        @keyframes tableBorderAnimation {
+            0% {
+                border-color: #ff0000;
+            }
+            50% {
+                border-color: #0000ff;
+            }
+            100% {
+                border-color: #ff0000;
+            }
+        }
+
+        /* Row Border Animation */
+        @keyframes specRowBorderAnimation {
+            0% {
+                border-color: #ff0000;
+            }
+            50% {
+                border-color: #0000ff;
+            }
+            100% {
+                border-color: #ff0000;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .specs-wrapper {
+                padding: 10px;
+            }
+
+            .specs-content {
+                padding: 10px;
+            }
+
+            .spec-row {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .specs-image img {
+                max-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="specs-wrapper">
+        <!-- Smartphone Specification Card -->
+        <div class="specs-card">
+            <div class="specs-header">
+                <h2 class="specs-title">Smartphone Overview</h2>
+            </div>
+            <div class="specs-image">
+                <img id="smartphone-image" src="https://www.gadgetsfever.in/wp-content/uploads/2025/01/freepik__enhance__10803-scaled.jpeg" alt="Smartphone Image">
+            </div>
+            <div class="specs-content">
+                <div class="spec-row">
+                    <div class="spec-category">Display</div>
+                    <div class="spec-details">6.7" AMOLED, 1240 x 2772 pixels, 120Hz</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-category">Processor</div>
+                    <div class="spec-details">MediaTek Dimensity 8200</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-category">Camera</div>
+                    <div class="spec-details">50MP (Main) + 8MP (Ultra-wide) + 2MP (Macro)</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-category">Battery</div>
+                    <div class="spec-details">5000mAh, 67W charging</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-category">Operating System</div>
+                    <div class="spec-details">Android 14, ColorOS 14</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-category">Build</div>
+                    <div class="spec-details">Glass front/back, Aluminum frame</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-category">Security</div>
+                    <div class="spec-details">In-display Fingerprint Scanner, Face Unlock</div>
+                </div>
+                <div class="spec-row">
+                    <div class="spec-category">Connectivity</div>
+                    <div class="spec-details">5G, Wi-Fi 6, Bluetooth 5.3, NFC</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
